@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/GameLanucherScene.unity
+    guid: 1981dc92dc7a8a749888922b83531eba
   m_configObjects: {}
