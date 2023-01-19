@@ -9,13 +9,18 @@ public class LaunchManager : MonoBehaviourPunCallbacks
     [SerializeField] private GameObject EnterGamePanel;
     [SerializeField] private GameObject ConnectionStatusPanel;
     [SerializeField] private GameObject LobbyPanel;
-
+    #region Unity Methods
     private void Start()
     {
         EnterGamePanel.SetActive(true);
         ConnectionStatusPanel.SetActive(false);
         LobbyPanel.SetActive(false);
     }
+    private void Awake()
+    {
+        PhotonNetwork.AutomaticallySyncScene = true;
+    }
+    #endregion
     #region PhotonCallbacks
     public override void OnConnectedToMaster()
     {
