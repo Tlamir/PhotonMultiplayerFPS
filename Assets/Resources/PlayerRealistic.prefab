@@ -112,6 +112,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   animator: {fileID: 2992012882156746373}
+  mouseSensitivity: 3
+  fpsCamera: {fileID: 2992012882689565124}
 --- !u!1 &2992012882689565121
 GameObject:
   m_ObjectHideFlags: 0
