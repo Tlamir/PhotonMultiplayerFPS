@@ -3,11 +3,25 @@ using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FpsGameManager : MonoBehaviourPunCallbacks
 {
     [SerializeField] GameObject playerPrefab;
     // Start is called before the first frame update
+
+    public static FpsGameManager instance;
+    private void Awake()
+    {
+        if (instance!=null)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
     void Start()
     {
         if (PhotonNetwork.IsConnected)
@@ -33,5 +47,15 @@ public class FpsGameManager : MonoBehaviourPunCallbacks
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         Debug.Log(newPlayer.NickName + " joined to " + PhotonNetwork.CurrentRoom.Name + " player count:  " + PhotonNetwork.CurrentRoom.PlayerCount);
+    }
+
+    public override void OnLeftRoom()
+    {
+        SceneManager.LoadScene("GameLanucherScene");
+    }
+
+    public void LeaveRoom()
+    {
+        PhotonNetwork.LeaveRoom();
     }
 }

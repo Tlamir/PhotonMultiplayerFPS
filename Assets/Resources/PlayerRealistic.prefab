@@ -71,7 +71,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0.24
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 180dee1cac6c3d24d8308adc8aaaff64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healtBar: {fileID: 397401039}
+  healthBar: {fileID: 397401039}
   startHealth: 100
 --- !u!1 &2992012882689565121
 GameObject:
@@ -383,8 +383,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2992012882689565121}
-  m_LocalRotation: {x: -0.006977511, y: 0, z: 0, w: 0.9999757}
-  m_LocalPosition: {x: 0.085, y: 2.383, z: 0.027}
+  m_LocalRotation: {x: -0.18252356, y: 0, z: 0, w: 0.9832015}
+  m_LocalPosition: {x: -0.061, y: 2.177, z: 0.208}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -416,7 +416,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 36
+  field of view: 51.7
   orthographic: 0
   orthographic size: 5
   m_Depth: 0

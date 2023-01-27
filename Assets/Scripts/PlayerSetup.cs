@@ -20,6 +20,7 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
         {
             transform.GetComponent<MovmentController>().enabled = false;
             playerCamera.GetComponent<Camera>().enabled = false;
+            playerCamera.GetComponent<AudioListener>().enabled = false;
         }
         SetPlayerUI();
     }
